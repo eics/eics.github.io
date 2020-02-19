@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link href="styles.css" rel="stylesheet">
+        <title>Terry Ni - Find Me</title>
+    </head>
+    <body class="container">
+        <header>
+            <h1><a href=index.html class="green"><b>TERRY NI</b></a></h1>
+            <h2>
+                <a href=index.html>Home</a>&nbsp;
+                <a href=projects.html>Projects</a>&nbsp;
+                <a href=travels.html>Travels</a>&nbsp;
+                <a href=contact.html>Find Me</a>
+            </h2>
+            <br>
+        </header>
+        <h4><i>Social Media</i></h4>
+        <ul>
+            <li><a href=https://www.instagram.com/reygniter/>Instagram</a></li>
+        </ul>
+        <br>
+        <h4><i>Email</i></h4>
+        <form class="form-group container" method="POST" name="contact" action="mailto:tni@college.harvard.edu">
+            Your Name
+            <input type="text" name="name" id="name" class="form-control" placeholder="Enter name">
+            <br>
+            Your Email
+            <input type="text" name="email" id="email" class="form-control" placeholder="Enter email">
+            <br>
+            Message
+            <textarea name="message" id="message" onkeyup="check()" class="form-control" rows="5"></textarea>
+            <br>
+            <input type="submit" id="button" value="Submit" class="btn btn-primary">
+        </form>
+        <script>
+            document.getElementById("button").disabled = true;
+            function check()
+            {
+                if (document.querySelector("#message").value == "")
+                {
+                    alert("Message required");
+                    document.getElementById("button").disabled = true;
+                }
+                else
+                {
+                    document.getElementById("button").disabled = false;
+                }
+            }
+
+        </script>
+    </body>
+</html>
